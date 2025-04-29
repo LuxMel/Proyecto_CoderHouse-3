@@ -1,0 +1,107 @@
+/* Body About Us */
+.background {
+    background-image: url(../images/about_us.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    min-height: 330vh;
+    position: relative;
+    z-index: 0;
+  
+  }
+  
+  /* Textos que se quedan fijos */
+  .about-us {
+    font-size: 20px;
+    position: fixed;
+    top: 20%;
+    left: 0;
+    width: 100%;
+    height: 55vh;
+    color: #FEFAFA;
+    background-color: rgba(134, 25, 63, 0.5);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+  }
+  
+  .about-us-content {
+    pointer-events: auto;
+    text-align: center;
+    padding: 0 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Colapsable SOLO en mobile */
+  #text {
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+  }
+  
+  #text.collapsed {
+    /* No limite en escritorio */
+  }
+  
+  /* Botón Ver Más / Ver Menos */
+  #toggleButton {
+    margin-top: 10px;
+    background-color: #FFADB3;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  #toggleButton:hover {
+    background-color: #FFADB3;
+  }
+  
+  /* Responsivo para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .about-us {
+      font-size: 16px;
+      top: 15%;
+      height: auto;
+      background-color: rgba(134, 25, 63, 0.7);
+      padding: 20px;
+    }
+  
+    .about-us-content {
+      max-width: 90%;
+      margin: 0 auto;
+      padding: 0 10px;
+    }
+  
+    .background {
+      min-height: 200vh;
+    }
+  
+    /* SOLO en mobile, limitamos el texto */
+    #text.collapsed {
+      max-height: 200px;
+    }
+  
+    #toggleButton {
+      display: inline-block;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .about-us {
+      font-size: 14px;
+      top: 10%;
+      height: auto;
+      padding: 20px;
+    }
+  
+    .about-us-content {
+      max-width: 85%;
+      margin: 0 auto;
+      padding: 0 10px;
+    }
+  }

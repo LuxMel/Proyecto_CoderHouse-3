@@ -1,0 +1,48 @@
+/* MOBILE MENU BUTTON */
+.menu-button {
+    display: none;
+  }
+  
+  @media (max-width: 800px) {
+    .hideOnMobile {
+        display: none;
+    }
+    .menu-button {
+        display: block;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .sidebar {
+        width: 100%;
+    }
+  }
+  /* BUTTON  NAV*/
+.btn {
+    font-weight: 700;
+    color: #FEFAFA;
+    padding: 9px 25px;
+    background-color: #861940;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+  }
+  
+  .btn:hover {
+    background-color: #FEFAFA;
+    color: #861940;
+    transform: scale(1.1);
+  }
+
+  /* FOOTER BOTTOM */
+.footer-bottom {
+    text-align: center;
+    padding-top: 10px;
+    font-size: 0.875rem;
+    background-color: #861940;
+    color: #FEFAFA;
+  }

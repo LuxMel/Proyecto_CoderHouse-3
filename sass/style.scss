@@ -1,0 +1,16 @@
+/* IMPORT LAYOUT*/
+@use "./layout/reset";
+@use "./layout/nav";
+@use "./layout/footer";
+
+/* IMPORT PAGES */
+@use "./pages/home";
+@use "./pages/aboutUs";
+@use "./pages/search";
+@use "./pages/shoppingCart";
+
+/* IMPORT COMPONENTS */
+@use "./components/buttons";
+
+/* IMPORT VARIABLES */
+@use "./base/variables"

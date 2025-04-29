@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carrito</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="../images/logo.jpeg" type="image/jpeg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body class="background2">
+  <!-- NAVBAR -->
+  <nav>
+    <ul class="sidebar">
+      <li onclick="hideSidebar()">
+        <img src="../icons/mdi-light_exit.svg" alt="Cerrar" height="26" />
+      </li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="buscar.html">Buscar</a></li>
+      <li><a href="carrito.html">Carrito</a></li>
+      <li><a href="login.html">Ingresar/Registrarse</a></li>
+    </ul>
+    <ul>
+      <li><a href="../index.html">Luxie Artem</a></li>
+      <li class="hideOnMobile"><a href="nosotros.html">Nosotros</a></li>
+      <li class="hideOnMobile"><a href="buscar.html">Buscar</a></li>
+      <li class="hideOnMobile"><a href="#">Carrito</a></li>
+      <li class="hideOnMobile">
+        <a href="login.html" class="btn">Ingresar/Registrarse</a>
+      </li>
+      <li class="menu-button">
+        <a href="#" onclick="showSidebar()">
+          <img src="../icons/material-symbols-light_menu.svg" alt="Menú" height="26" />
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- JS NAV -->
+  <script>
+    function showSidebar() {
+      const sidebar = document.querySelector(".sidebar");
+      sidebar.style.display = "flex";
+    }
+    function hideSidebar() {
+      const sidebar = document.querySelector(".sidebar");
+      sidebar.style.display = "none";
+    }
+  </script>
+
+  <!-- CARRITO -->
+  <main class="items" style="padding: 2rem;">
+    <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 2rem;">
+      <!-- PRODUCTO 1 -->
+      <li class="item" style="display: flex; gap: 1rem; align-items: center; background: #fff; border-radius: 10px; padding: 1rem;">
+        <img src="../images/Items carrito/616xLudMZGL._AC_SL1234_.jpg" alt="Producto 1" style="width: 120px; height: auto; border-radius: 10px;" />
+        <div class="item-details">
+          <h3>Mai Shiranui KOF</h3>
+          <p>Precio: $500.000</p>
+          <div class="quantity-control">
+            <button class="decrease">−</button>
+            <span class="quantity">1</span>
+            <button class="increase">+</button>
+          </div>
+        </div>
+      </li>
+
+      <!-- PRODUCTO 2 -->
+      <li class="item" style="display: flex; gap: 1rem; align-items: center; background: #fff; border-radius: 10px; padding: 1rem;">
+        <img src="../images/Items carrito/61GfmpCW3oL._AC_SL1024_.jpg" alt="Producto 2" style="width: 120px; height: auto; border-radius: 10px;" />
+        <div class="item-details">
+          <h3>Figura Jinx LOL</h3>
+          <p>Precio: $1.200.000</p>
+          <div class="quantity-control">
+            <button class="decrease">−</button>
+            <span class="quantity">1</span>
+            <button class="increase">+</button>
+          </div>
+        </div>
+      </li>
+
+      <!-- PRODUCTO 3 -->
+      <li class="item" style="display: flex; gap: 1rem; align-items: center; background: #fff; border-radius: 10px; padding: 1rem;">
+        <img src="../images/Items carrito/61QfQtuIy-L._AC_SL1500_.jpg" alt="Producto 3" style="width: 120px; height: auto; border-radius: 10px;" />
+        <div class="item-details">
+          <h3>Cosplay Sailor Moon</h3>
+          <p>Precio: $450.000</p>
+          <div class="quantity-control">
+            <button class="decrease">−</button>
+            <span class="quantity">1</span>
+            <button class="increase">+</button>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div style="text-align: center; margin-top: 30px;">
+        <a href="confirmacion.html" class="btn">Confirmar compra</a>
+      </div>
+      
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="../images/logo.jpeg" alt="Logo" />
+      </div>
+      <div class="footer-links">
+        <ul>
+          <li><a href="menu.html">Nosotros</a></li>
+          <li><a href="buscar.html">Buscar</a></li>
+          <li><a href="carrito.html">Carrito</a></li>
+          <li><a href="login.html">Ingresar/Registrarse</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <a href="#" class="social-icon">Facebook</a>
+        <a href="#" class="social-icon">Instagram</a>
+        <a href="#" class="social-icon">Twitter</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Luxie Artem. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- JS CONTADOR -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const increaseButtons = document.querySelectorAll(".increase");
+      const decreaseButtons = document.querySelectorAll(".decrease");
+
+      increaseButtons.forEach((button, index) => {
+        button.addEventListener("click", () => {
+          const quantitySpan = document.querySelectorAll(".quantity")[index];
+          let current = parseInt(quantitySpan.textContent);
+          quantitySpan.textContent = current + 1;
+        });
+      });
+
+      decreaseButtons.forEach((button, index) => {
+        button.addEventListener("click", () => {
+          const quantitySpan = document.querySelectorAll(".quantity")[index];
+          let current = parseInt(quantitySpan.textContent);
+          if (current > 1) {
+            quantitySpan.textContent = current - 1;
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

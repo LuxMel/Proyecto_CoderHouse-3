@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxie Artem</title>
+    <link rel="icon" href="C:\Users\Luciana Mello\Desktop\proyecto_coder_house\images\logo.JPEG" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+<!-- Carga de fuentes desde Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Lexend+Giga:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=Waterfall&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Barra de navegación principal -->
+    <nav>
+      <!-- Menú lateral para dispositivos móviles -->
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><img src="icons/mdi-light_exit.svg" height="26" viewBox="0 96 960 960" width="26"></li>
+            <li><a href="pages/nosotros.html">Nosotros</a></li>
+            <li><a href="pages/buscar.html">Buscar</a></li>
+            <li><a href="pages/carrito.html">Carrito</a></li>
+            <li><a href="pages/login.html">Ingresar/Registrarse</a></li>
+ 
+        </ul>
+        <!-- Menú de navegación principal para escritorio -->
+        <ul>
+            <li><a href="#">Luxie Artem</a></li>
+            <li class="hideOnMobile"><a href="pages/nosotros.html">Nosotros</a></li>
+            <li class="hideOnMobile"><a href="pages/buscar.html">Buscar</a></li>
+            <li class="hideOnMobile"><a href="pages/carrito.html">Carrito</a></li> 
+            <li class="hideOnMobile">
+              <a href="pages/login.html" class="btn">Ingresar/Registrarse</a>
+            </li>
+            <li class="menu-button">
+                <a href="#" onclick="showSidebar()">
+                  <img src="icons/material-symbols-light_menu.svg" alt="Menú" height="26" width="26">
+                </a>
+              </li>
+        </ul>
+    </nav>
+    <!-- Scripts para mostrar u ocultar el menú lateral -->
+    <script>
+        function showSidebar(){
+            const sidebar= document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar(){
+            const sidebar= document.querySelector('.sidebar')
+            sidebar.style.display = 'none'   
+        }
+    </script>
+<!-- Sección categorías destacadas -->
+<div class="image-container">
+    <div class="image-slide2">
+      <img src="images/banners/banner1.jpg" alt="Imagen 1">
+      <div class="image-text">Reserva tu </div>
+      <div class="image-text2">Book</div>
+    </div>
+    <div class="image-slide2">
+      <img src="images/banners/banner2.jpg" alt="Imagen 2">
+      <div class="image-text3">Este mes contamos con set fotográfico temático KDA. Reserva tu sesión ahora</div>
+    </div>
+  </div>
+  <div class="image-category">
+    <div class="image-slide">
+      <img src="images/banners/categoria.jpg" alt="Imagen 1">
+      <div class="image-label">CUADROS</div>
+    </div>
+    <div class="image-slide">
+      <img src="images/banners/categoria2.jpg" alt="Imagen 2">
+      <div class="image-label">FIGURAS</div>
+    </div>
+    <div class="image-slide">
+      <img src="images/banners/categoria3.png" alt="Imagen 3">
+      <div class="image-label">COSPLAY</div>
+    </div>
+  </div>
+  <!-- Pie de página con enlaces y redes sociales -->
+  <footer>
+    <div class="footer-container">
+        <div class="footer-logo">
+            <img src="images/logo.JPEG" alt="Logo">
+        </div>
+        <div class="footer-links">
+            <ul>
+                <li><a href="pages/menu.html">Nosotros</a></li>
+                <li><a href="pages/buscar.html">Buscar</a></li>
+                <li><a href="pages/carrito.html">Carrito</a></li>
+                <li><a href="pages/login.html">Ingresar/Registrarse</a></li>
+            </ul>
+        </div>
+        <div class="footer-social">
+            <a href="#" class="social-icon">Facebook</a>
+            <a href="#" class="social-icon">Instagram</a>
+            <a href="#" class="social-icon">Twitter</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Luxie Artem. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de Nosotros</title>
+    <link rel="icon" href="C:\Users\Luciana Mello\Desktop\proyecto_coder_house\images\logo.JPEG" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
+    
+
+<!--FONTS-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Lexend+Giga:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=Waterfall&display=swap" rel="stylesheet">
+</head>
+<body class="background">
+    <nav>
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><img src="../icons/mdi-light_exit.svg" height="26" viewBox="0 96 960 960" width="26"></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="buscar.html">Buscar</a></li>
+            <li><a href="carrito.html">Carrito</a></li>
+            <li><a href="login.html">Ingresar/Registrarse</a></li>
+ 
+        </ul>
+        <ul>
+            <li><a href="../index.html">Luxie Artem</a></li>
+            <li class="hideOnMobile"><a href="#">Nosotros</a></li>
+            <li class="hideOnMobile"><a href="buscar.html">Buscar</a></li>
+            <li class="hideOnMobile"><a href="carrito.html">Carrito</a></li> 
+            <li class="hideOnMobile">
+              <a href="login.html" class="btn">Ingresar/Registrarse</a>
+            </li>
+            <li class="menu-button">
+                <a href="#" onclick="showSidebar()">
+                  <img src="../icons/material-symbols-light_menu.svg" alt="Menú" height="26" width="26">
+                </a>
+              </li>
+        </ul>
+    </nav>
+    <script>
+        function showSidebar(){
+            const sidebar= document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar(){
+            const sidebar= document.querySelector('.sidebar')
+            sidebar.style.display = 'none'   
+        }
+    </script>
+<div class="background">
+    <div class="about-us">
+      <div class="about-us-content">
+        <div id="text" class="collapsed">
+          <p><strong>En Luxie Artem no solo creamos arte, lo vivimos y compartimos.</strong> Cada pieza refleja nuestra pasión por el arte, el detalle y la autenticidad. Creemos en lo único: piezas hechas a mano, con amor y dedicación, pensadas para quienes valoran lo especial. Nos inspiran los mundos que amamos —anime, cine, videojuegos, fantasía y cultura geek—, transformándolos en experiencias visuales que podés tocar, vestir o atesorar. Cada creación es una obra de amor y conexión. Fusionamos arte, técnica y corazón para ofrecerte algo auténtico, pensado para que encuentres una parte de vos en cada pieza.</p>
+          <p><strong>Luxie Artem – Arte que te elige. Arte que te representa.</strong></p>
+        </div>
+        <button id="toggleButton">Ver más</button>
+      </div>
+    </div>
+  </div>
+<script>
+const text = document.getElementById('text');
+const button = document.getElementById('toggleButton');
+
+// Función para activar solo en mobile
+function handleResize() {
+  if (window.innerWidth <= 768) {
+    text.classList.add('collapsed');
+    button.style.display = 'inline-block';
+  } else {
+    text.classList.remove('collapsed');
+    button.style.display = 'none';
+  }
+}
+
+// Toggle expandir y contraer
+button.addEventListener('click', () => {
+  text.classList.toggle('collapsed');
+  button.textContent = text.classList.contains('collapsed') ? 'Ver más' : 'Ver menos';
+});
+
+// Detectar cambios de tamaño
+window.addEventListener('resize', handleResize);
+
+// Ejecutar al cargar
+handleResize();
+
+</script>  
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+            <img src="../images/logo.jpeg" alt="Logo">
+            </div>
+            <div class="footer-links">
+                <ul>
+                     <li><a href="menu.html">Nosotros</a></li>
+                     <li><a href="buscar.html">Buscar</a></li>
+                     <li><a href="carrito.html">Carrito</a></li>
+                     <li><a href="login.html">Ingresar/Registrarse</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                 <a href="#" class="social-icon">Facebook</a>
+                 <a href="#" class="social-icon">Instagram</a>
+                 <a href="#" class="social-icon">Twitter</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+             <p>&copy; 2025 Luxie Artem. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

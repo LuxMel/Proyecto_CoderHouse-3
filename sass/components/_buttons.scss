@@ -1,48 +1,91 @@
+@use '../sass-utils/mixins';
+
 /* MOBILE MENU BUTTON */
 .menu-button {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .hideOnMobile {
     display: none;
   }
-  
-  @media (max-width: 800px) {
-    .hideOnMobile {
-        display: none;
-    }
-    .menu-button {
-        display: block;
-    }
+  .menu-button {
+    display: block;
   }
-  
-  @media (max-width: 400px) {
-    .sidebar {
-        width: 100%;
-    }
+}
+
+@media (max-width: 400px) {
+  .sidebar {
+    width: 100%;
   }
-  /* BUTTON  NAV*/
+}
+
+/* BUTTON NAV */
 .btn {
-    font-weight: 700;
-    color: #FEFAFA;
-    padding: 9px 25px;
-    background-color: #861940;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    display: inline-block;
-    text-align: center;
-  }
-  
-  .btn:hover {
-    background-color: #FEFAFA;
-    color: #861940;
+  @include mixins.button-style(#861940, #FEFAFA, #FEFAFA, #861940);
+  padding: 9px 25px;
+  border-radius: 20px;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  transition: transform 0.3s ease;
+
+  &:hover {
     transform: scale(1.1);
   }
+}
 
-  /* FOOTER BOTTOM */
+/* FOOTER BOTTOM */
 .footer-bottom {
-    text-align: center;
-    padding-top: 10px;
-    font-size: 0.875rem;
-    background-color: #861940;
-    color: #FEFAFA;
-  }
+  text-align: center;
+  padding-top: 10px;
+  font-size: 0.875rem;
+  background-color: #861940;
+  color: #FEFAFA;
+}
+
+/* Botón Ver Más / Ver Menos ABOUT US */
+#toggleButton {
+  margin-top: 10px;
+  @include mixins.button-style(#FFADB3, #000000, #FFADB3, #000000);
+  border-radius: 8px;
+}
+
+/* Button Search */
+main.input h1 {
+  margin-bottom: 20px;
+}
+
+main.input .button {
+  @include mixins.button-style(#FFADB3, #861940, #861940, #FEFAFA);
+  font-size: 1rem;
+  border-radius: 8px;
+  outline: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons Shopping Cart */
+.remove-button {
+  @include mixins.button-style(#861940, #FEFAFA, #FFADB3, #000);
+  margin-top: 10px;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.quantity-control button {
+  @include mixins.button-style(#861940, #fff, #FFADB3, #000);
+  font-size: 1rem;
+  padding: 6px 12px;
+}
+
+.quantity-control .quantity {
+  font-size: 1.1rem;
+  font-weight: bold;
+  min-width: 20px;
+  text-align: center;
+}

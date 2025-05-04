@@ -41,22 +41,6 @@
     overflow: hidden;
     transition: max-height 0.5s ease;
   }
-  
-  #text.collapsed {
-    /* No limite en escritorio */
-  }
-  
-  /* Botón Ver Más / Ver Menos */
-  #toggleButton {
-    margin-top: 10px;
-    background-color: #FFADB3;
-    color: #000000;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    cursor: pointer;
-  }
-  
   #toggleButton:hover {
     background-color: #FFADB3;
   }

@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Encuentra lo que buscas en Luxie Artem. Descubre figuras de anime, cosplay, y otros productos inspirados en tus personajes favoritos de anime, videojuegos y cómics.">
+    <meta name="keywords" content="buscar, figuras anime, cosplay, figuras videojuegos, compras anime, productos geek, Luxie Artem">
+    <meta name="author" content="Luxie Artem">
+    <meta name="robots" content="index, follow">
     <title>Buscar</title>
     <link rel="icon" href="C:\Users\Luciana Mello\Desktop\proyecto_coder_house\images\logo.JPEG" type="image/x-icon">
     <link rel="stylesheet" href="../css/style.css">
@@ -14,13 +18,13 @@
 </head>
 <body class="background2">
     <nav>
-        <ul class="sidebar">
-            <li onclick=hideSidebar()><img src="../icons/mdi-light_exit.svg" height="26" viewBox="0 96 960 960" width="26"></li>
-            <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="buscar.html">Buscar</a></li>
-            <li><a href="carrito.html">Carrito</a></li>
-            <li><a href="login.html">Ingresar/Registrarse</a></li>
- 
+        <!-- Menú lateral para móviles -->
+        <ul class="sidebar" aria-label="Menú lateral">
+          <li><button onclick="hideSidebar()" aria-label="Cerrar menú lateral"><img src="../icons/mdi-light_exit.svg" height="26" width="26" alt="Cerrar menú"></button></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="#">Buscar</a></li>
+          <li><a href="carrito.html">Carrito</a></li>
+          <li><a href="login.html">Ingresar/Registrarse</a></li>
         </ul>
         <ul>
             <li><a href="../index.html">Luxie Artem</a></li>
@@ -64,7 +68,7 @@
             </div>
             <div class="footer-links">
                 <ul>
-                     <li><a href="menu.html">Nosotros</a></li>
+                     <li><a href="nosotros.html">Nosotros</a></li>
                      <li><a href="buscar.html">Buscar</a></li>
                      <li><a href="carrito.html">Carrito</a></li>
                      <li><a href="login.html">Ingresar/Registrarse</a></li>

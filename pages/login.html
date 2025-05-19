@@ -1,77 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ingresar/Registrarse</title>
-    <link rel="icon" href="C:\Users\Luciana Mello\Desktop\proyecto_coder_house\images\logo.JPEG" type="image/x-icon">
-    <link rel="stylesheet" href="../css/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Ingresar o Registrarse - Luxie Artem</title>
+  <meta name="description" content="Accede a tu cuenta o regístrate en Luxie Artem para disfrutar de arte, cosplay y productos únicos.">
+  <meta name="keywords" content="login, registro, ingresar, cuenta, Luxie Artem, arte, cosplay, figuras, cuadros">
+  <meta name="author" content="Luxie Artem">
 
-    <!-- FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Lexend+Giga:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=Waterfall&display=swap" rel="stylesheet">
+  <link rel="icon" href="../images/logo.jpeg" type="image/x-icon">
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Lexend+Giga:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=Waterfall&display=swap" rel="stylesheet">
 </head>
+
 <body class="background2">
-
-    <!-- NAVBAR -->
+  <header>
+    <!-- Navegación -->
     <nav>
-        <ul class="sidebar">
-            <li onclick="hideSidebar()">
-                <img src="../icons/mdi-light_exit.svg" height="26" width="26" alt="Cerrar menú">
-            </li>
-            <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="buscar.html">Buscar</a></li>
-            <li><a href="carrito.html">Carrito</a></li>
-            <li><a href="#">Ingresar/Registrarse</a></li>
-        </ul>
-        <ul>
-            <li><a href="../index.html">Luxie Artem</a></li>
-            <li class="hideOnMobile"><a href="nosotros.html">Nosotros</a></li>
-            <li class="hideOnMobile"><a href="buscar.html">Buscar</a></li>
-            <li class="hideOnMobile"><a href="carrito.html">Carrito</a></li>
-            <li class="hideOnMobile">
-                <a href="#" class="btn">Ingresar/Registrarse</a>
-            </li>
-            <li class="menu-button">
-                <a href="#" onclick="showSidebar()">
-                    <img src="../icons/material-symbols-light_menu.svg" alt="Menú" height="26" width="26">
-                </a>
-            </li>
-        </ul>
+      <ul class="sidebar" aria-label="Menú lateral">
+        <li><button onclick="hideSidebar()" aria-label="Cerrar menú"><img src="../icons/mdi-light_exit.svg" height="26" width="26" alt="Cerrar menú"></button></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="buscar.html">Buscar</a></li>
+        <li><a href="carrito.html">Carrito</a></li>
+        <li><a href="#">Ingresar/Registrarse</a></li>
+      </ul>
+      <ul>
+        <li><a href="../index.html">Luxie Artem</a></li>
+        <li class="hideOnMobile"><a href="nosotros.html">Nosotros</a></li>
+        <li class="hideOnMobile"><a href="buscar.html">Buscar</a></li>
+        <li class="hideOnMobile"><a href="carrito.html">Carrito</a></li>
+        <li class="hideOnMobile"><a href="#" class="btn">Ingresar/Registrarse</a></li>
+        <li class="menu-button">
+          <a href="#" onclick="showSidebar()" aria-label="Abrir menú">
+            <img src="../icons/material-symbols-light_menu.svg" alt="Menú" height="26" width="26">
+          </a>
+        </li>
+      </ul>
     </nav>
+  </header>
 
-    <!-- TÍTULO -->
-    <h1 class="title">INGRESAR</h1>
+  <main>
+    <!-- Título de la página -->
+    <h1 class="title">Ingresar a tu cuenta</h1>
 
-    <!-- FORMULARIO -->
-    <main class="input">
-        <form action="">
-            <div class="item">
-                <label for="email">EMAIL:</label><br>
-                <input id="email" class="box" type="email" required>
-            </div>
-            <div class="item">
-                <label for="password">CONTRASEÑA:</label><br>
-                <input id="password" class="box" type="password" required>
-            </div>
-            <input class="button" type="submit" value="INGRESAR">
-        </form>
-    </main>
+    <!-- Formulario de acceso -->
+    <section class="input" aria-label="Formulario de ingreso">
+      <form action="#" method="POST">
+        <div class="item">
+          <label for="email">Correo electrónico:</label><br>
+          <input id="email" name="email" class="box" type="email" required placeholder="tu@correo.com" aria-required="true">
+        </div>
+        <div class="item">
+          <label for="password">Contraseña:</label><br>
+          <input id="password" name="password" class="box" type="password" required placeholder="********" aria-required="true">
+        </div>
+        <input class="button2" type="submit" value="Ingresar">
+      </form>
+    </section>
+  </main>
 
-    <!-- FOOTER -->
-    <footer>
+ <!-- Pie de página con enlaces y redes sociales -->
+  <footer>
         <div class="footer-container">
             <div class="footer-logo">
-                <img src="../images/logo.jpeg" alt="Logo">
+                <img src="../images/logo.JPEG" alt="Logo">
             </div>
             <div class="footer-links">
                 <ul>
-                    <li><a href="menu.html">Nosotros</a></li>
-                    <li><a href="buscar.html">Buscar</a></li>
-                    <li><a href="carrito.html">Carrito</a></li>
-                    <li><a href="login.html">Ingresar/Registrarse</a></li>
+                    <li><a href="pages/nosotros.html">Nosotros</a></li>
+                    <li><a href="pages/buscar.html">Buscar</a></li>
+                    <li><a href="pages/carrito.html">Carrito</a></li>
+                    <li><a href="pages/login.html">Ingresar/Registrarse</a></li>
                 </ul>
             </div>
             <div class="footer-social">
@@ -85,18 +90,16 @@
         </div>
     </footer>
 
-    <!-- JAVASCRIPT PARA MENU -->
-    <script>
-        function showSidebar() {
-            const sidebar = document.querySelector('.sidebar');
-            sidebar.style.display = 'flex';
-        }
+  <!-- JavaScript para el menú lateral -->
+  <script>
+    function showSidebar() {
+      document.querySelector('.sidebar').style.display = 'flex';
+    }
 
-        function hideSidebar() {
-            const sidebar = document.querySelector('.sidebar');
-            sidebar.style.display = 'none';
-        }
-    </script>
-
+    function hideSidebar() {
+      document.querySelector('.sidebar').style.display = 'none';
+    }
+  </script>
 </body>
 </html>
+

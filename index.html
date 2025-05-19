@@ -1,91 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luxie Artem</title>
-    <link rel="icon" href="C:\Users\Luciana Mello\Desktop\proyecto_coder_house\images\logo.JPEG" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">
-<!-- Carga de fuentes desde Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Lexend+Giga:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=Waterfall&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Luxie Artem - Arte, Cosplay y Decoración</title>
+  <meta name="description" content="Luxie Artem: descubre cuadros únicos, figuras coleccionables y sesiones fotográficas cosplay personalizadas.">
+  <meta name="keywords" content="arte, cosplay, figuras, cuadros, fotografía temática, decoración">
+  <meta name="author" content="Luxie Artem">
+
+  <link rel="icon" href="images/logo.jpeg" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Lexend+Giga:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=Waterfall&display=swap" rel="stylesheet">
 </head>
-<body>
-    <!-- Barra de navegación principal -->
+
+<body class="background2">
+  <header>
     <nav>
-      <!-- Menú lateral para dispositivos móviles -->
-        <ul class="sidebar">
-            <li onclick=hideSidebar()><img src="icons/mdi-light_exit.svg" height="26" viewBox="0 96 960 960" width="26"></li>
-            <li><a href="pages/nosotros.html">Nosotros</a></li>
-            <li><a href="pages/buscar.html">Buscar</a></li>
-            <li><a href="pages/carrito.html">Carrito</a></li>
-            <li><a href="pages/login.html">Ingresar/Registrarse</a></li>
- 
-        </ul>
-        <!-- Menú de navegación principal para escritorio -->
-        <ul>
-            <li><a href="#">Luxie Artem</a></li>
-            <li class="hideOnMobile"><a href="pages/nosotros.html">Nosotros</a></li>
-            <li class="hideOnMobile"><a href="pages/buscar.html">Buscar</a></li>
-            <li class="hideOnMobile"><a href="pages/carrito.html">Carrito</a></li> 
-            <li class="hideOnMobile">
-              <a href="pages/login.html" class="btn">Ingresar/Registrarse</a>
-            </li>
-            <li class="menu-button">
-                <a href="#" onclick="showSidebar()">
-                  <img src="icons/material-symbols-light_menu.svg" alt="Menú" height="26" width="26">
-                </a>
-              </li>
-        </ul>
+      <!-- Menú lateral para móviles -->
+      <ul class="sidebar" aria-label="Menú lateral">
+        <li><button onclick="hideSidebar()" aria-label="Cerrar menú lateral"><img src="icons/mdi-light_exit.svg" height="26" width="26" alt="Cerrar menú"></button></li>
+        <li><a href="pages/nosotros.html">Nosotros</a></li>
+        <li><a href="pages/buscar.html">Buscar</a></li>
+        <li><a href="pages/carrito.html">Carrito</a></li>
+        <li><a href="pages/login.html">Ingresar/Registrarse</a></li>
+      </ul>
+
+      <!-- Menú principal de navegación -->
+      <ul>
+        <li><a href="index.html">Luxie Artem</a></li>
+        <li class="hideOnMobile"><a href="pages/nosotros.html">Nosotros</a></li>
+        <li class="hideOnMobile"><a href="pages/buscar.html">Buscar</a></li>
+        <li class="hideOnMobile"><a href="pages/carrito.html">Carrito</a></li>
+        <li class="hideOnMobile"><a href="pages/login.html" class="btn">Ingresar/Registrarse</a></li>
+        <li class="menu-button">
+          <a href="#" onclick="showSidebar()" aria-label="Abrir menú lateral">
+            <img src="icons/material-symbols-light_menu.svg" alt="Menú" height="26" width="26">
+          </a>
+        </li>
+      </ul>
     </nav>
-    <!-- Scripts para mostrar u ocultar el menú lateral -->
-    <script>
-        function showSidebar(){
-            const sidebar= document.querySelector('.sidebar')
-            sidebar.style.display = 'flex'
-        }
-        function hideSidebar(){
-            const sidebar= document.querySelector('.sidebar')
-            sidebar.style.display = 'none'   
-        }
-    </script>
-<!-- Sección categorías destacadas -->
-<div class="image-container">
-    <div class="image-slide2">
-      <img src="images/banners/banner1.jpg" alt="Imagen 1">
-      <div class="image-text">Reserva tu </div>
-      <div class="image-text2">Book</div>
-    </div>
-    <div class="image-slide2">
-      <img src="images/banners/banner2.jpg" alt="Imagen 2">
-      <div class="image-text3">Este mes contamos con set fotográfico temático KDA. Reserva tu sesión ahora</div>
-    </div>
-  </div>
-  <div class="image-category">
-    <div class="image-slide">
-      <img src="images/banners/categoria.jpg" alt="Imagen 1">
-      <div class="image-label">CUADROS</div>
-    </div>
-    <div class="image-slide">
-      <img src="images/banners/categoria2.jpg" alt="Imagen 2">
-      <div class="image-label">FIGURAS</div>
-    </div>
-    <div class="image-slide">
-      <img src="images/banners/categoria3.png" alt="Imagen 3">
-      <div class="image-label">COSPLAY</div>
-    </div>
-  </div>
-  <!-- Pie de página con enlaces y redes sociales -->
-  <footer>
+  </header>
+
+  <main>
+    <!-- Sección de banners -->
+    <section class="image-container">
+      <article class="image-slide2">
+        <img src="images/banners/banner1.jpg" alt="Reserva tu sesión de fotos">
+        <div class="image-text">Reserva tu</div>
+        <div class="image-text2">Book</div>
+      </article>
+      <div class="image-text3">Este mes contamos con set fotográfico temático KDA. ¡Reserva tu sesión ahora!</div>
+      <article class="image-slide2">
+        <img src="images/banners/banner2.jpg" alt="Set fotográfico temático KDA">
+      </article>
+    </section>
+
+    <!-- Categorías destacadas -->
+    <section class="image-category" aria-label="Categorías de productos">
+      <article class="image-slide">
+        <img src="images/banners/categoria.jpg" alt="Categoría Cuadros">
+        <div class="image-label">CUADROS</div>
+      </article>
+
+      <article class="image-slide">
+        <img src="images/banners/categoria2.jpg" alt="Categoría Figuras">
+        <div class="image-label">FIGURAS</div>
+      </article>
+
+      <article class="image-slide">
+        <img src="images/banners/categoria3.png" alt="Categoría Cosplay">
+        <div class="image-label">COSPLAY</div>
+      </article>
+    </section>
+  </main>
+
+   <!-- Pie de página con enlaces y redes sociales -->
+   <footer>
     <div class="footer-container">
         <div class="footer-logo">
             <img src="images/logo.JPEG" alt="Logo">
         </div>
         <div class="footer-links">
             <ul>
-                <li><a href="pages/menu.html">Nosotros</a></li>
+                <li><a href="pages/nosotros.html">Nosotros</a></li>
                 <li><a href="pages/buscar.html">Buscar</a></li>
                 <li><a href="pages/carrito.html">Carrito</a></li>
                 <li><a href="pages/login.html">Ingresar/Registrarse</a></li>
@@ -101,6 +104,15 @@
         <p>&copy; 2025 Luxie Artem. Todos los derechos reservados.</p>
     </div>
 </footer>
+  <!-- Scripts -->
+  <script>
+    function showSidebar() {
+      document.querySelector('.sidebar').style.display = 'flex';
+    }
 
+    function hideSidebar() {
+      document.querySelector('.sidebar').style.display = 'none';
+    }
+  </script>
 </body>
 </html>

@@ -1,6 +1,8 @@
 /* NAVBAR */
 nav {
-    background-color: #FFADB3;
+  padding: 3%;
+  background-image: linear-gradient(269deg,rgba(251, 160, 206, 1) 0%, rgba(255, 164, 185, 1) 41%, rgba(255, 176, 158, 1) 74%, rgba(255, 196, 131, 1) 87%, rgba(255, 221, 113, 1) 93%, rgba(249, 248, 113, 1) 98%);
+  
   }
   
   nav ul {
@@ -20,11 +22,12 @@ nav {
     text-decoration: none;
     display: flex;
     align-items: center;
-    color: black;
+    color: #54424a;
   }
   
   nav a:hover {
-    background-color: #861940;
+    border-radius: 20px;
+    background-color: #c497e2;
     color: #FEFAFA;
   }
   
@@ -40,7 +43,7 @@ nav {
     height: 100vh;
     width: 250px;
     z-index: 999;
-    background-color: #ffadb260;
+    background-color: #ffadb2;
     backdrop-filter: blur(10px);
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
     display: none;

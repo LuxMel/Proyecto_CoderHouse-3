@@ -1,116 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acerca de Nosotros</title>
-    <link rel="icon" href="C:\Users\Luciana Mello\Desktop\proyecto_coder_house\images\logo.JPEG" type="image/x-icon">
-    <link rel="stylesheet" href="../css/style.css">
-    
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conoce más sobre Luxie Artem, creadores de arte único inspirado en el anime, videojuegos y cómics. Nos especializamos en figuras personalizadas, cosplays, cuadros y fotografía.">
+  <meta name="keywords" content="artesanía, anime, videojuegos, cosplay, figuras, cuadros, fotografía, arte personalizado, Luxie Artem">
+  <meta name="author" content="Luxie Artem">
+  <meta name="robots" content="index, follow">
+  <title>Acerca de Nosotros</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="../images/logo.JPEG" type="image/x-icon">
 
-<!--FONTS-->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Lexend+Giga:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=Waterfall&display=swap" rel="stylesheet">
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Lexend+Giga:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=Waterfall&display=swap" rel="stylesheet">
 </head>
-<body class="background">
-    <nav>
-        <ul class="sidebar">
-            <li onclick=hideSidebar()><img src="../icons/mdi-light_exit.svg" height="26" viewBox="0 96 960 960" width="26"></li>
-            <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="buscar.html">Buscar</a></li>
-            <li><a href="carrito.html">Carrito</a></li>
-            <li><a href="login.html">Ingresar/Registrarse</a></li>
- 
-        </ul>
-        <ul>
-            <li><a href="../index.html">Luxie Artem</a></li>
-            <li class="hideOnMobile"><a href="#">Nosotros</a></li>
-            <li class="hideOnMobile"><a href="buscar.html">Buscar</a></li>
-            <li class="hideOnMobile"><a href="carrito.html">Carrito</a></li> 
-            <li class="hideOnMobile">
-              <a href="login.html" class="btn">Ingresar/Registrarse</a>
-            </li>
-            <li class="menu-button">
-                <a href="#" onclick="showSidebar()">
-                  <img src="../icons/material-symbols-light_menu.svg" alt="Menú" height="26" width="26">
-                </a>
-              </li>
-        </ul>
-    </nav>
-    <script>
-        function showSidebar(){
-            const sidebar= document.querySelector('.sidebar')
-            sidebar.style.display = 'flex'
-        }
-        function hideSidebar(){
-            const sidebar= document.querySelector('.sidebar')
-            sidebar.style.display = 'none'   
-        }
-    </script>
-<div class="background">
-    <div class="about-us">
-      <div class="about-us-content">
-        <div id="text" class="collapsed">
-          <p><strong>En Luxie Artem no solo creamos arte, lo vivimos y compartimos.</strong> Cada pieza refleja nuestra pasión por el arte, el detalle y la autenticidad. Creemos en lo único: piezas hechas a mano, con amor y dedicación, pensadas para quienes valoran lo especial. Nos inspiran los mundos que amamos —anime, cine, videojuegos, fantasía y cultura geek—, transformándolos en experiencias visuales que podés tocar, vestir o atesorar. Cada creación es una obra de amor y conexión. Fusionamos arte, técnica y corazón para ofrecerte algo auténtico, pensado para que encuentres una parte de vos en cada pieza.</p>
-          <p><strong>Luxie Artem – Arte que te elige. Arte que te representa.</strong></p>
-        </div>
-        <button id="toggleButton">Ver más</button>
+<body class="background2">
+
+  <!-- NAV -->
+  <nav>
+    <!-- Menú lateral para móviles -->
+    <ul class="sidebar" aria-label="Menú lateral">
+      <li><button onclick="hideSidebar()" aria-label="Cerrar menú lateral"><img src="../icons/mdi-light_exit.svg" height="26" width="26" alt="Cerrar menú"></button></li>
+      <li><a href="#">Nosotros</a></li>
+      <li><a href="buscar.html">Buscar</a></li>
+      <li><a href="carrito.html">Carrito</a></li>
+      <li><a href="login.html">Ingresar/Registrarse</a></li>
+    </ul>
+
+
+    <ul>
+      <li><a href="../index.html">Luxie Artem</a></li>
+      <li class="hideOnMobile"><a href="#">Nosotros</a></li>
+      <li class="hideOnMobile"><a href="buscar.html">Buscar</a></li>
+      <li class="hideOnMobile"><a href="carrito.html">Carrito</a></li>
+      <li class="hideOnMobile">
+        <a href="login.html" class="btn">Ingresar/Registrarse</a>
+      </li>
+      <li class="menu-button">
+        <a href="#" onclick="showSidebar()">
+          <img src="../icons/material-symbols-light_menu.svg" alt="Menú" height="26" width="26">
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <div class="image-containerA">
+    <!-- Imagen 1 -->
+    <div class="image-slide2">
+      <img src="../images/about_us/about_us_figuras.png" alt="Imagen 1">
+      <div class="image-textA">Pintura en</div>
+      <div class="image-textA2">Figuras</div>
+      <div class="image-text4">
+        Creamos figuras personalizadas únicas, inspiradas en el universo del anime, los videojuegos y los cómics...
       </div>
     </div>
+
+    <!-- Imagen 2 -->
+    <div class="image-slide2">
+      <img src="../images/about_us/about_us_cosplay.png" alt="Imagen 2">
+      <div class="image-textA">Costura de</div>
+      <div class="image-textA2">Cosplays</div>
+      <div class="image-text4">
+        Transformamos tus personajes favoritos en realidad, creando cosplays únicos hechos a medida...
+      </div>
+    </div>
+
+    <!-- Imagen 3 -->
+    <div class="image-slide2">
+      <img src="../images/about_us/about_us_cuadros.png" alt="Imagen 3">
+      <div class="image-textA">Pintura de</div>
+      <div class="image-textA2">Cuadros</div>
+      <div class="image-text4">
+        Creamos cuadros personalizados inspirados en el universo del anime, videojuegos y cómics...
+      </div>
+    </div>
+
+    <!-- Imagen 4 -->
+    <div class="image-slide2">
+      <img src="../images/about_us/about_us_fotografia.png" alt="Imagen 4">
+      <div class="image-textA">Fotografía de</div>
+      <div class="image-textA2">Cosplays</div>
+      <div class="image-text4">
+        Nos especializamos en fotografía de cosplay, creando escenarios y atmósferas que reflejan los mundos...
+      </div>
+    </div>
+
+    <!-- Texto general (versión desktop) -->
+    <div class="about-us">
+      Convertimos tu pasión en arte. Creamos figuras, cuadros, cosplays y sesiones fotográficas totalmente personalizadas, inspiradas en el mundo del anime, los videojuegos y los cómics. Cada pieza está hecha a medida con un nivel de detalle excepcional, combinando calidad, creatividad y emoción para ofrecerte productos únicos que realmente cuentan tu historia y hacen que cada experiencia sea inolvidable.
+    </div>
   </div>
-<script>
-const text = document.getElementById('text');
-const button = document.getElementById('toggleButton');
 
-// Función para activar solo en mobile
-function handleResize() {
-  if (window.innerWidth <= 768) {
-    text.classList.add('collapsed');
-    button.style.display = 'inline-block';
-  } else {
-    text.classList.remove('collapsed');
-    button.style.display = 'none';
-  }
-}
+  <!-- Puntos de navegación -->
+  <div class="carousel-indicators">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
 
-// Toggle expandir y contraer
-button.addEventListener('click', () => {
-  text.classList.toggle('collapsed');
-  button.textContent = text.classList.contains('collapsed') ? 'Ver más' : 'Ver menos';
-});
+  <!-- Script Carrusel -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const dots = document.querySelectorAll('.dot');
+      const slides = document.querySelectorAll('.image-slide2');
 
-// Detectar cambios de tamaño
-window.addEventListener('resize', handleResize);
+      function handleScroll() {
+        const scrollPosition = document.querySelector('.image-containerA').scrollLeft;
+        const slideWidth = slides[0].offsetWidth;
+        const index = Math.floor(scrollPosition / slideWidth);
 
-// Ejecutar al cargar
-handleResize();
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === index);
+        });
+      }
 
-</script>  
-    <footer>
-        <div class="footer-container">
-            <div class="footer-logo">
-            <img src="../images/logo.jpeg" alt="Logo">
-            </div>
-            <div class="footer-links">
-                <ul>
-                     <li><a href="menu.html">Nosotros</a></li>
-                     <li><a href="buscar.html">Buscar</a></li>
-                     <li><a href="carrito.html">Carrito</a></li>
-                     <li><a href="login.html">Ingresar/Registrarse</a></li>
-                </ul>
-            </div>
-            <div class="footer-social">
-                 <a href="#" class="social-icon">Facebook</a>
-                 <a href="#" class="social-icon">Instagram</a>
-                 <a href="#" class="social-icon">Twitter</a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-             <p>&copy; 2025 Luxie Artem. Todos los derechos reservados.</p>
-        </div>
-    </footer>
+      document.querySelector('.image-containerA').addEventListener('scroll', handleScroll);
+      handleScroll();
+    });
+  </script>
+
+  <!-- Script para el menú -->
+  <script>
+    function showSidebar() {
+      const sidebar = document.querySelector('.sidebar');
+      sidebar.style.display = 'flex';
+    }
+
+    function hideSidebar() {
+      const sidebar = document.querySelector('.sidebar');
+      sidebar.style.display = 'none';
+    }
+  </script>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="../images/logo.jpeg" alt="Logo">
+      </div>
+      <div class="footer-links">
+        <ul>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="buscar.html">Buscar</a></li>
+          <li><a href="carrito.html">Carrito</a></li>
+          <li><a href="login.html">Ingresar/Registrarse</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <a href="#" class="social-icon">Facebook</a>
+        <a href="#" class="social-icon">Instagram</a>
+        <a href="#" class="social-icon">Twitter</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Luxie Artem. Todos los derechos reservados.</p>
+    </div>
+  </footer>
 
 </body>
 </html>

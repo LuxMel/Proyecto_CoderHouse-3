@@ -22,7 +22,7 @@
 
 /* BUTTON NAV */
 .btn {
-  @include mixins.button-style(#861940, #FEFAFA, #FEFAFA, #861940);
+  @include mixins.button-style(#44d0bf, #FEFAFA, #FEFAFA,#00998a);
   padding: 9px 25px;
   border-radius: 20px;
   text-decoration: none;
@@ -40,33 +40,51 @@
   text-align: center;
   padding-top: 10px;
   font-size: 0.875rem;
-  background-color: #861940;
+  background-color: #00998a;
   color: #FEFAFA;
 }
-
-/* Botón Ver Más / Ver Menos ABOUT US */
-#toggleButton {
-  margin-top: 10px;
-  @include mixins.button-style(#FFADB3, #000000, #FFADB3, #000000);
-  border-radius: 8px;
-}
-
 /* Button Search */
 main.input h1 {
   margin-bottom: 20px;
 }
 
 main.input .button {
-  @include mixins.button-style(#FFADB3, #861940, #861940, #FEFAFA);
+  @include mixins.button-style(#44d0bf, #FEFAFA, #00998a, #FEFAFA);
   font-size: 1rem;
   border-radius: 8px;
   outline: none;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Button Search */
+.button2 {
+  @include mixins.button-style(#44d0bf, #FEFAFA, #00998a, #FEFAFA);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1rem;
+  border-radius: 8px;
+  outline: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+@media (min-width: 768px) {
+  .button2 {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1rem;
+    border-radius: 8px;
+    outline: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+}
+
+
 /* Buttons Shopping Cart */
 .remove-button {
-  @include mixins.button-style(#861940, #FEFAFA, #FFADB3, #000);
+  @include mixins.button-style(#00998a, #FEFAFA, #FBA0CE, #000);
   margin-top: 10px;
 }
 
@@ -78,7 +96,7 @@ main.input .button {
 }
 
 .quantity-control button {
-  @include mixins.button-style(#861940, #fff, #FFADB3, #000);
+  @include mixins.button-style(#00998a, #fff, #FBA0CE, #000);
   font-size: 1rem;
   padding: 6px 12px;
 }

@@ -712,7 +712,7 @@ main.input .button:hover {
 @media (min-width: 768px) {
   .button2 {
     position: absolute;
-    top: 73%;
+    top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 1rem;
